@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->string('no',8)->primary();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+        Schema::table('courses', function (Blueprint $table) {
+            $table->string('no_form',8);
+            $table->foreign('no_form','fk_courses_no_form')->references('no')->on('forms')->onUpdate('CASCADE');
         });
     }
 
@@ -31,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::table('courses', function (Blueprint $table) {
+            $table->dropForeign('fk_courses_no_form');
+            $table->dropColumn('no_form');
+        });
     }
 };
