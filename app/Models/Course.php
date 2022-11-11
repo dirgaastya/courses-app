@@ -9,8 +9,5 @@ class Course extends Model
 {
     use HasFactory;
     
-    protected $guarded = [
-        'id',
-        'form_id'
-    ];
+    protected $table = 'courses';
 }
