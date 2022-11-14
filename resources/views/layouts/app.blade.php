@@ -8,10 +8,10 @@
   @vite('resources/js/app.js')
   <title>Home</title>
 </head>
-<body>
-  @include('components.navbar')
-  @yield('content')
-
+<body class="">
+    @include('components.navbar')
+    @yield('content')
+    @include('components.footer')
   <script>
     // Burger menus
     document.addEventListener('DOMContentLoaded', function() {
@@ -52,7 +52,17 @@
                 });
             }
         }
+
+        // dark mode toogle
+        const toggle = document.getElementById('toggle-theme');
+        const body  = document.body;
+        toggle.addEventListener('click', function() {
+            body.classList.toggle('dark');
+           
+        });
+      
     });
-    </script>
+</script>
+
 </body>
 </html>
