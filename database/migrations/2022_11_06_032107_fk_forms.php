@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('forms', function (Blueprint $table) {
             $table->string('no_user',8);
-            $table->foreign('no_user','fk_forms_no_user')->references('no')->on('users')->onUpdate('CASCADE');
+            $table->foreign('no_user','fk_forms_no_user')->references('id')->on('users')->onUpdate('CASCADE');
             $table->bigInteger('period_id')->unsigned();
             $table->foreign('period_id','fk_forms_period_id')->references('id')->on('periods')->onUpdate('CASCADE');
         });

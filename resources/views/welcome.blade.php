@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('content')
 <div class="min-h-screen bg-white relative pt-10 pb-10 lg:pt-10 lg:px-10 lg:flex lg:items-center lg:justify-between dark:bg-gray-900">

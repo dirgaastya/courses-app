@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FormController;
-use App\Http\Controllers\CourseController;
-use App\Http\Controllers\PeriodController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('course',CourseController::class);
-Route::resource('form',FormController::class);
-Route::resource('period',PeriodController::class);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__.'/auth.php';
