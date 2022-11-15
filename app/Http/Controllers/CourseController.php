@@ -12,9 +12,10 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
-        //
+        return view('master.course.index');
     }
 
     /**
@@ -24,7 +25,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+        return view('master.course.create');
     }
 
     /**
@@ -46,7 +47,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        //
+        return view('master.course.show');
     }
 
     /**
@@ -57,7 +58,7 @@ class CourseController extends Controller
      */
     public function edit(Course $course)
     {
-        //
+        return view('master.course.edit',);
     }
 
     /**

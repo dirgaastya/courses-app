@@ -14,7 +14,7 @@ class PeriodController extends Controller
      */
     public function index()
     {
-        //
+        return view('master.period.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class PeriodController extends Controller
      */
     public function create()
     {
-        //
+        return view('master.period.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class PeriodController extends Controller
      */
     public function show(Period $period)
     {
-        //
+        return view('master.period.show');
     }
 
     /**
@@ -57,7 +57,7 @@ class PeriodController extends Controller
      */
     public function edit(Period $period)
     {
-        //
+        return view('master.period.edit');
     }
 
     /**

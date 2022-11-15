@@ -14,7 +14,7 @@ class FormController extends Controller
      */
     public function index()
     {
-        //
+        return view('master.form.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        //
+        return view('master.form.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class FormController extends Controller
      */
     public function show(Form $form)
     {
-        //
+        return view('master.form.show');
     }
 
     /**
@@ -57,7 +57,7 @@ class FormController extends Controller
      */
     public function edit(Form $form)
     {
-        //
+        return view('master.form.edit');
     }
 
     /**
