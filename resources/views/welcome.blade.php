@@ -4,26 +4,26 @@
 <div class="min-h-screen bg-white relative pt-10 pb-10 lg:pt-10 lg:px-10 lg:flex lg:items-center lg:justify-between dark:bg-gray-900">
     <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">
         <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl dark:text-white">
-            You can 
-            <br class="lg:block hidden"> 
+            You can
+            <br class="lg:block hidden">
             <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
-                learning 
+                learning
             </span>anything.
         </h1>
         <div class="lg:flex">
             <div class="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
                 <p class="sm:text-lg text-gray-700 dark:text-gray-300 lg:w-11/12">
-                    Tingkatkan keterampilan bersama kami.
+                    Improve Your Skill.
                 </p>
                 <div class="flex justify-center lg:justify-start">
                     <a href="#" class="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30">
                         <div class="flex justify-center space-x-4">
                             <span class="font-medium dark:text-white">Join Class Here</span>
                         </div>
-                    </a> 
+                    </a>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <div class="mt-12 md:mt-0 lg:w-2/4">
@@ -56,7 +56,7 @@
           <p class="my-8 text-gray-600 dark:text-gray-300">
             Start, switch, or advance your career with more than 5,200 courses, Professional Certificates, and degrees from world-class universities and companies.
           </p>
-  
+
           <a
               href="https://tailus.io/contact"
               class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-sky-100 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
@@ -134,8 +134,8 @@
       </div>
     </div>
   </div>
-  
-  
+
+
   <div class="dark:bg-gray-900 py-16">
     <div class="xl:container m-auto px-6 text-gray-600 dark:text-gray-300 md:px-12 xl:px-6">
       <h2 class="mb-12 text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
@@ -166,7 +166,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="rounded-3xl sm:flex sm:space-x-8 border border-gray-100 dark:border-gray-700 dark:bg-gray-800 p-8 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none">
           <img
             class="mx-auto h-20 w-20 rounded-full"
@@ -214,5 +214,5 @@
       </div>
     </div>
   </div>
-  
+
 @endsection

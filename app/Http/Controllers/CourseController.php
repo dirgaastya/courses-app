@@ -12,10 +12,11 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
     public function index()
     {
-        return view('master.course.index');
+        $courses = Course::all();
+        return view('master.course.index',compact('courses'));
     }
 
     /**
@@ -45,9 +46,9 @@ class CourseController extends Controller
      * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function show(Course $course)
+    public function show(Course $courses)
     {
-        return view('master.course.show');
+        return view('master.course.show',compact('courses'));
     }
 
     /**
@@ -56,9 +57,9 @@ class CourseController extends Controller
      * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course)
+    public function edit(Course $courses)
     {
-        return view('master.course.edit',);
+        return view('master.course.edit',compact('courses'));
     }
 
     /**
@@ -68,7 +69,7 @@ class CourseController extends Controller
      * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request, Course $courses)
     {
         //
     }
@@ -79,7 +80,7 @@ class CourseController extends Controller
      * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Course $course)
+    public function destroy(Course $courses)
     {
         //
     }

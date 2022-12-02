@@ -40,6 +40,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($courses as $course)
                             <tr>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     1
@@ -57,11 +58,16 @@
                                     <a href="#">01 - First Year</a>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-white">
-                                  <a href="#" class="px-4 py-2 border rounded-md bg-yellow-500">Edit</a>
-                                  <a href="#" class="px-4 py-2 border rounded-md bg-red-500">Delete</a>
+                                    <form action="{{ route('course.destroy',$course->name) }}" method="POST">
+                                        <a href="{{ route('course.show',$course->name) }}" class="px-4 py-2 border rounded-md bg-green-500">Show</a>
+                                        <a href="{{ route('course.edit',$course->name) }}" class="px-4 py-2 border rounded-md bg-yellow-500">Edit</a>
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="px-4 py-2 border rounded-md bg-red-500">Delete</button>
+                                    </form>
                                 </td>
-                                
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     <div
