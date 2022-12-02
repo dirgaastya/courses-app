@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\PeriodController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +17,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view ('welcome');
 });
+
+Route::middleware(['auth', 'verified'])->group(function (){
+    Route::get('/dashboard',function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::resources([
+        'course' => CourseController::class,
+        'form' => FormController::class,
+        'period' => PeriodController::class
+    ]);
+});
+
+require __DIR__.'/auth.php';

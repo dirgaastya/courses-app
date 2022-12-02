@@ -20,9 +20,8 @@ return new class extends Migration
             $table->string('birthplace');
             $table->string('city');
             $table->enum('education',['SMA/SMK','S1','S2','S3']);
-            $table->string('profession');
+            $table->string('job');
             $table->string('phone_number');
-            $table->bigInteger('cost');
             $table->timestamps();
         });
     }

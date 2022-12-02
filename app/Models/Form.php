@@ -9,9 +9,7 @@ class Form extends Model
 {
     use HasFactory;
 
-    protected $guarded = [
-        'id',
-        'no_user',
-        'period_id'
-    ];
+    protected $table = 'forms';
+    protected $primaryKey = 'no';
+    public $incrementing = false;
 }

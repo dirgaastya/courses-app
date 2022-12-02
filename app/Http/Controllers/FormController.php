@@ -1,0 +1,86 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Form;
+use Illuminate\Http\Request;
+
+class FormController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $forms = Form::all();
+        return view('master.form.index',compact('forms'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('master.form.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Form  $form
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Form $form)
+    {
+        return view('master.form.show');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Form  $form
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Form $form)
+    {
+        return view('master.form.edit',compact('form'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Form  $form
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Form $form)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Form  $form
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Form $form)
+    {
+        //
+    }
+}
