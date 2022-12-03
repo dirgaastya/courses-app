@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Haruncpi\LaravelIdGenerator\IdGenerator;
 
 class RegisteredUserController extends Controller
 {
@@ -33,17 +34,28 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        $config = [
+            'table' => 'users',
+            'length' => 8,
+            'prefix' => date('ym'),
+            'reset_on_prefix_change' => true,
+        ];
+
+        $id = IdGenerator::generate($config);
+
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'role' => 'required|string',
         ]);
 
         $user = User::create([
-            'id' => 'ID000001',
+            'id' => $id,
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role,
         ]);
 
         event(new Registered($user));

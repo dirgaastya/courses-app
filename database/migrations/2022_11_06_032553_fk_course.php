@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('courses', function (Blueprint $table) {
-            $table->string('no_form',8);
-            $table->foreign('no_form','fk_courses_no_form')->references('no')->on('forms')->onUpdate('CASCADE');
+        $table->string('no_form',8);
+        $table->foreign('no_form','fk_courses_no_form')->references('no')->on('forms')->onUpdate('CASCADE');
         });
     }
 

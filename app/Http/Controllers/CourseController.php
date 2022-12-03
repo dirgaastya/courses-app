@@ -15,7 +15,7 @@ class CourseController extends Controller
 
     public function index()
     {
-        $courses = Course::all();
+        $courses = Course::latest()->paginate(5);
         return view('master.course.index',compact('courses'));
     }
 
@@ -37,7 +37,13 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'mentor_name' => 'required'
+        ]);
+
+        Course::create($request->all());
+        return redirect()->route('course.index')->with('success','Student created successfully.');
     }
 
     /**
